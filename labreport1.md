@@ -9,7 +9,7 @@
 
 **Step 2: Remotely Connecting**
 - To establish the remote connection, I first reset the password associated with my CSE 15L account on this [Website](https://sdacs.ucsd.edu/~icc/index.php)
-- Then, I opened VS Code and opened up a new terminal and ran the following command (replace zz with the letters from your specific account ID) :
+- Then, I opened VS Code and opened up a new terminal and ran the following command (replace *zz* with the letters from your specific account ID) :
 ~~~
 ssh cs15lsp23zz@ieng6.ucsd.edu 
 ~~~
