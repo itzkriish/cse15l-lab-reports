@@ -39,16 +39,16 @@ ssh cs15lsp23zz@ieng6.ucsd.edu
     4) `ls -lat`
     This command combines three options with ls: l, a, t. 
 
-    -l indicates a long list with detailed information about each file/directory in separate lines.
+     -l indicates a long list with detailed information about each file/directory in separate lines.
 
-    -a indicates that all files/directories (including hidden ones) are included in the list.
+     -a indicates that all files/directories (including hidden ones) are included in the list.
 
-    -t indicates that the files are listed in the order in which they were last modified (newest first).
+     -t indicates that the files are listed in the order in which they were last modified (newest first).
 
-    Together these three combine to produce the output we see in the snippet above.
+     Together these three combine to produce the output we see in the snippet above.
 
     5) `pwd`
-    This command prints the current working directory.
+    This command prints the full path of the current working directory.
 
     6) `exit`
     This command helps us log out of the remote server in our terminal. We can also use Ctrl-D to achieve the same.
