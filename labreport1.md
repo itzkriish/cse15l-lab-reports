@@ -38,9 +38,13 @@ ssh cs15lsp23zz@ieng6.ucsd.edu
 
     4) `ls -lat`
     This command combines three options with ls: l, a, t. 
+
     -l indicates a long list with detailed information about each file/directory in separate lines.
+
     -a indicates that all files/directories (including hidden ones) are included in the list.
+
     -t indicates that the files are listed in the order in which they were last modified (newest first).
+
     Together these three combine to produce the output we see in the snippet above.
 
     5) `pwd`
