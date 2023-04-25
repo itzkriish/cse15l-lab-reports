@@ -25,25 +25,26 @@ ssh cs15lsp23zz@ieng6.ucsd.edu
 ![Image](Image3.png)
 
 - To briefly describe each command:
-1) `cd` and `cd ~`
-Both these commands navigate to the home directory, from whatever directory one is currently in. 
-Also even though it is not done in the screenshot, we can also change directory using cd by adding a file/directory name after cd, and that would become our current working directory (given that the file exists).
 
-2) `ls`
-This command lists all the files/directories in the current directory, *except for* hidden files and directories.
+    1) `cd` and `cd ~`
+    Both these commands navigate to the home directory, from whatever directory one is currently in. 
+    Also even though it is not done in the screenshot, we can also change directory using cd by adding a file/directory name after cd, and that would become our current     working directory (given that the file exists).
 
-3) `ls -a`
-This command lists all the files/directories in the current directory, *including* hidden files and directories.
+    2) `ls`
+    This command lists all the files/directories in the current directory, *except for* hidden files and directories.
 
-4) `ls -lat`
-This command combines three options with ls: l, a, t. 
--l indicates a long list with detailed information about each file/directory in separate lines.
--a indicates that all files/directories (including hidden ones) are included in the list.
--t indicates that the files are listed in the order in which they were last modified (newest first).
-Together these three combine to produce the output we see in the snippet above.
+    3) `ls -a`
+    This command lists all the files/directories in the current directory, *including* hidden files and directories.
 
-5) `pwd`
-This command prints the current working directory.
+    4) `ls -lat`
+    This command combines three options with ls: l, a, t. 
+    -l indicates a long list with detailed information about each file/directory in separate lines.
+    -a indicates that all files/directories (including hidden ones) are included in the list.
+    -t indicates that the files are listed in the order in which they were last modified (newest first).
+    Together these three combine to produce the output we see in the snippet above.
 
-6) `exit`
-This command helps us log out of the remote server in our terminal. We can also use Ctrl-D to achieve the same.
+    5) `pwd`
+    This command prints the current working directory.
+
+    6) `exit`
+    This command helps us log out of the remote server in our terminal. We can also use Ctrl-D to achieve the same.
