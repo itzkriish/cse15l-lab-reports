@@ -34,7 +34,11 @@ public class StringServer {
 
 ~~~
 
-- The code basically keeps track of a string variable called `s`, which gets manipulated based on the specific request, which in this case is of the type ` /add-message?s=<string> `.
+- The code basically keeps track of a string variable called `s`, which gets manipulated based on the specific request, which in this case is of the type 
+~~~ 
+/add-message?s=<string> 
+~~~
+
 - The existing string variable gets concatenated with a newline (`\n`) and the value in place of `<string>`, and the result is displayed.
 
 
