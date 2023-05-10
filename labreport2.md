@@ -9,16 +9,16 @@ import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler {
-    // A string that will be manipulated by various requests.
-    String s = "";
-    public String handleRequest(URI url) {
-        if (url.getPath().contains("/add-message") && url.getQuery().contains("s=")) {
-            String[] parameters = url.getQuery().split("=");
-            s = s + "\n" + parameters[1];
-            return s;
-        }
-        return s;
-    }
+  // A string that will be manipulated by various requests.
+  String s = "";
+  public String handleRequest(URI url) {
+      if (url.getPath().contains("/add-message") && url.getQuery().contains("s=")) {
+          String[] parameters = url.getQuery().split("=");
+          s = s + "\n" + parameters[1];
+          return s;
+      }
+      return s;
+  }
 }
 
 public class StringServer {
