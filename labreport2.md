@@ -36,9 +36,11 @@ in the initial image, the `url` is simply [http://localhost:4000](http://localho
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];  // bug in this line -> tries to assign value from new array, which only has default values 0
+    // bug in next line -> tries to assign value from new array, which only has default values 0
+      arr[i] = newArray[arr.length - i - 1];  
     }
-    return arr;  // bug in this line -> returns old array
+    // bug in next line -> returns old array
+    return arr;  
   }
 ~~~
 
@@ -92,9 +94,11 @@ Here, we don't get a failure as the new array has default values of 0 that get a
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-      newArray[i] = arr[arr.length - i - 1];  // fixed bug -> we now assign the value from the old array to the new array 
+      // fixed bug -> we now assign the value from the old array to the new array 
+      newArray[i] = arr[arr.length - i - 1];  
     }
-    return newArray;  // fixed bug -> we return the new reversed list
+    // fixed bug -> we return the new reversed list
+    return newArray;  
   }
   ~~~
   
