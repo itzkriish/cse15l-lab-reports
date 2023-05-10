@@ -36,7 +36,8 @@ in the initial image, the `url` is simply [http://localhost:4000](http://localho
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-    // bug in next line -> tries to assign value from new array, which only has default values 0
+    // bug in next line -> tries to assign value from new array, 
+    // which only has default values 0
       arr[i] = newArray[arr.length - i - 1];  
     }
     // bug in next line -> returns old array
