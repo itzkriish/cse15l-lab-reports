@@ -30,6 +30,7 @@ in the initial image, the `url` is simply [http://localhost:4000](http://localho
 
 **Part 2**
 - I have chosen the bug in the `reversed()` method in `ArrayExamples.java`. The following is the original code snippet for the method:
+
 ~~~
   // Returns a *new* array with all the elements of the input array in reversed
   // order
@@ -41,10 +42,12 @@ in the initial image, the `url` is simply [http://localhost:4000](http://localho
     return arr;  // bug in this line -> returns old array
   }
 ~~~
+
 The bug in this program is that it assigns values from the new array, whose elements are all the default value (0), to the old array, when instead it is supposed to do the opposite. It also returns the old array itself instead of returning the new, reversed array.
 
 
 - The following is a failure-inducing input for the buggy program as a JUnit Test, that helped me identify the bug:
+
 ~~~
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -57,10 +60,12 @@ public class ArrayTests {
   }
 }
 ~~~
+
 Here, instead of getting our expected array output, we actually get `{0, 0}` since we assign the default value 0 from the newly created `int[]` array. So our test ends up failing.
 
 
 - The following is an input that doesn't induce a failure despite the code being buggy:
+
 ~~~
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -73,6 +78,7 @@ public class ArrayTests {
   }
 }
 ~~~
+
 Here, we don't get a failure as the new array has default values of 0 that get assigned to the old array, and since we expect our output array to have only 0s as elements, it ends up working out.
 
 
@@ -81,6 +87,7 @@ Here, we don't get a failure as the new array has default values of 0 that get a
 
 
 - The following is the code snippet after fixing the bug:
+
 ~~~
   // Returns a *new* array with all the elements of the input array in reversed
   // order
@@ -92,6 +99,7 @@ Here, we don't get a failure as the new array has default values of 0 that get a
     return newArray;  // fixed bug -> we return the new reversed list
   }
   ~~~
+  
 After making the above changes both our tests succesfully pass and we get the desired outputs. The first change we made was making sure that we assigned the last element of the old array as the first element of the new one, which ensures the new array has elements in reverse order of the older one. Earlier we were assigning values from opposite arrays causing the bug. The next change was simply returning the new array that we created to store the elements in reverse order, rather than returning the old array itself. Both these changes together fixed bugs from our code and helped us successfully implement what we wanted to do.
 
 
