@@ -2,8 +2,38 @@
 ## Lab Report 2
 
 **Part 1**
-- The following image shows my code for `StringServer`: 
-![Image](Image4.png)
+- The following is the code snippet for `StringServer`: 
+
+~~~
+import java.io.IOException;
+import java.net.URI;
+
+class Handler implements URLHandler {
+    // A string that will be manipulated by various requests.
+    String s = "";
+    public String handleRequest(URI url) {
+        if (url.getPath().contains("/add-message") && url.getQuery().contains("s=")) {
+            String[] parameters = url.getQuery().split("=");
+            s = s + "\n" + parameters[1];
+            return s;
+        }
+        return s;
+    }
+}
+
+public class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+        int port = Integer.parseInt(args[0]);
+        Server.start(port, new Handler());
+    }
+}
+
+~~~
+
 - The code basically keeps track of a string variable called `s`, which gets manipulated based on the specific request, which in this case is of the type
 ` /add-message?s=<string> `.
 - The existing string variable gets concatenated with a newline (`\n`) and the value in place of `<string>`, and the result is displayed.
@@ -11,11 +41,11 @@
 
 - The following screenshots show examples of using `/add-message`.
 - - Initially:
-    ![Image](Image5.png)
+    ![Image](Image4.png)
   - Request 1:
-    ![Image](Image6.png)
+    ![Image](Image5.png)
   - Request 2:
-    ![Image](Image7.png)
+    ![Image](Image6.png)
 
 
 - For each of the two requests, the `handleRequest(URI url)` method gets called, which essentially takes the url of our server as an input, manipulates
@@ -85,7 +115,7 @@ Here, we don't get a failure as the new array has default values of 0 that get a
 
 
 - The following screenshot shows the output of running these tests:
-![Image](Image8.png)
+![Image](Image7.png)
 
 
 - The following is the code snippet after fixing the bug:
