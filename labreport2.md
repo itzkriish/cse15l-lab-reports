@@ -32,8 +32,7 @@ in the initial image, the `url` is simply [http://localhost:4000](http://localho
 - I have chosen the bug in the `reversed()` method in `ArrayExamples.java`. The following is the original code snippet for the method:
 
 ~~~
-  // Returns a *new* array with all the elements of the input array in reversed
-  // order
+  // Returns a *new* array with all the elements of the input array in reversed order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
@@ -89,8 +88,7 @@ Here, we don't get a failure as the new array has default values of 0 that get a
 - The following is the code snippet after fixing the bug:
 
 ~~~
-  // Returns a *new* array with all the elements of the input array in reversed
-  // order
+  // Returns a *new* array with all the elements of the input array in reversed order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
