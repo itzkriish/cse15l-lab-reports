@@ -33,8 +33,10 @@ This then causes the rest of the script to break as well and so the file does no
 working directory, even the last few commands you ran. Do your best to provide as much context as you can.*
 
 The command I am running is : `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`. I even tested on other repositories,
-and it fails at the same step every time.
+and it fails at the same step every time. 
 
+I'm not sure what causes the errors, but my best guess would be something to do with the files not
+being copied properly into the directory, or a syntax error in the copy commaand.
 Can you please provide me some guidance on what I should look into? Thanks!
 
 **TA Response**
