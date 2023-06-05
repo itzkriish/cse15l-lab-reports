@@ -5,39 +5,33 @@
 
 **Original Student Post**
 
-*Title*: Need Help Debugging `grade.sh`
+- *Title*: Need Help Debugging `grade.sh`
 
-*Category*: Debugging
+- *Category*: Debugging
 
-*What environment are you using (computer, operating system, web browser, terminal/editor, and so on)?*
+- *What environment are you using (computer, operating system, web browser, terminal/editor, and so on)?*
 
-I'm using VS Code Terminal on my MacBook 
+   I'm using VS Code Terminal on my MacBook 
 
-*Detail the symptom you're seeing. Be specific; include both what you're seeing and what you expected to see instead. 
+- *Detail the symptom you're seeing. Be specific; include both what you're seeing and what you expected to see instead. 
 Screenshots are great, copy-pasted terminal output is also great. Avoid saying “it doesn't work”.*
 
-My grade.sh script can successfully clone the repository of the student submission as well as check that the correct file is submitted.
-It however, fails when I try to copy the necessary files - `TestListExamples.java` and `ListExamples.java` - into the grading area
-directory. I get two errors:
+   My grade.sh script can successfully clone the repository of the student submission as well as check that the correct file is submitted. It however, fails when I try to copy the necessary files - `TestListExamples.java` and `ListExamples.java` - into the `grading-area` directory. I get two errors:
 
-1) `cp: directory grading-area does not exist` 
+   1) `cp: directory grading-area does not exist` 
 
-2) `error: file not found: TestListExamples.java`
+   2) `error: file not found: TestListExamples.java`
 
-This then causes the rest of the script to break as well and so the file does not compile. But I do have a directory being created called 
-`grading-area` and the file is present as well as you can see in the following screenshot:
+   This then causes the rest of the script to break as well and so the file does not compile. But I do have a directory being created called `grading-area` and the file is present as well as you can see in the following screenshot:
 
-![Image](Image14.png)
+   ![Image](Image14.png)
 
-*Detail the failure-inducing input and context. That might mean any or all of the command you're running, a test case, command-line arguments, 
+- *Detail the failure-inducing input and context. That might mean any or all of the command you're running, a test case, command-line arguments, 
 working directory, even the last few commands you ran. Do your best to provide as much context as you can.*
 
-The command I am running is : `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`. I even tested on other repositories,
-and it fails at the same step every time. 
+   The command I am running is : `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`. I even tested on other repositories, and it fails at the same step every time. 
 
-I'm not sure what causes the errors, but my best guess would be something to do with the files not
-being copied properly into the directory, or a syntax error in the copy commaand.
-Can you please provide me some guidance on what I should look into? Thanks!
+   I'm not sure what causes the errors, but my best guess would be something to do with the files not being copied properly into the directory, or a syntax error in the copy commaand. Can you please provide me some guidance on what I should look into? Thanks!
 
 **TA Response**
 
